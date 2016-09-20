@@ -27,6 +27,10 @@ module.exports = [
     loader: lessLoader
   },
   {
+    test: /\.css$/,
+    loader: 'style!css'
+  },
+  {
     test: /\.vue$/,
     loader: 'vue'
   },
