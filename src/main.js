@@ -1,26 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueValidator from 'vue-validator'
 import VueResource from 'vue-resource'
-import App from './App.vue'
-import Login from  './views/Login.vue'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
+Vue.use(VueValidator)
 Vue.use(VueResource)
 
+Vue.config.debug = true
 
-const router = new VueRouter()
-router.map({
-  '/':{
-    component: Login
-  },
-  '/login': {
-    component: Login
-  }
+import {configRouter} from './route'
+
+
+let buildVersion = 'BUILDVERSION_PLACEHOLDER'
+console.log('Build on ' + buildVersion)
+
+
+const router = new VueRouter({
+  saveScrollPosition: true
 })
 
-router.redirect({
-  '*': '/login'
-})
-router.start(Login,'#app')
-window.router = router;
+configRouter(router)
+window.router = router
+
+router.start(Vue.extend({}), '#app')
