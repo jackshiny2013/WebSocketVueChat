@@ -14,7 +14,7 @@ export function configRouter(router) {
       component: require('../views/login.vue')
     },
     '/main': {
-      name: 'main',
+      name: 'k',
       component: require('../App.vue'),
 
     }
