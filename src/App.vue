@@ -69,9 +69,10 @@
 
 <script>
   import store from './store'
+  import card from './components/card.vue'
   export  default{
     components: {
-      card: require('./views/card.vue')
+      card
     },
     store: store
   }

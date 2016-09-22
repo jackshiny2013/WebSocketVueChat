@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div class="card card-container">
+    <div class="card-container card">
       <h3 class="login-title">Vue webpack</h3>
       <img id="profile-img"  class="profile-name-card" src="../assets/logo.png">
       <p id="profile-name" class="profile-name-card"></p>
       <form class="form-signin">
-        <input class="username-input" placeholder="用户名">
-        <input class="password-input" placeholder="密码">
-        <button class="login-btn">登录</button>
+        <input class="form-control" placeholder="用户名">
+        <input class="form-control" placeholder="密码">
+        <button class="btn btn-lg btn-primary btn-block btn-signin">登录</button>
       </form>
     </div>
   </div>
@@ -19,4 +19,12 @@
     }
 </style>
 <script>
+  export default {
+    data:{
+
+    },
+    methods: {
+
+    }
+  }
 </script>

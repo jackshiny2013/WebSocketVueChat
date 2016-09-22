@@ -2,7 +2,10 @@ body, html {
   height: 100%;
 }
 .container {
+  margin-top: 150px;
   height: 100%;
+  width: 350px;
+  border-radius: 5px;
   background: #eee;
 }
 .card-container.card {
@@ -19,3 +22,33 @@ body, html {
   color: #a94442;
   padding: 2px 4px;
 }
+
+.form-signin.form-control:focus {
+  border-color: #0685FF;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.75), 0 0 8px #0066CC;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.75), 0 0 8px #0066CC;
+}
+
+.btn-signin {
+  background-color: #0066CC;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+}
+
+.btn-signin:hover,
+.btn-signin:active,
+.btn-signin:focus {
+  background-color: #0685FF;
+}
+
