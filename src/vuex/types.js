@@ -1,0 +1,27 @@
+/**
+ * Created by maizifeng on 6/9/16.
+ */
+
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_FAIL = 'LOGIN_FAIL'
+export const LOGOUT_USER = 'LOGOUT_USER'
+
+export const SHOW_MSG = 'SHOW_MSG'
+export const HIDE_MSG = 'HIDE_MSG'
+
+export const GET_CAPTCHAURL = 'GET_CAPTCHAURL'
+export const USERINFO_FAILURE = 'USERINFO_FAILURE'
+export const USERINFO_SUCCESS = 'USERINFO_SUCCESS'
+
+export  const GET_COMPANY_SUCCESS = 'GET_COMPANY_SUCCESS'
+export  const GET_COMPANY_FAILURE = 'GET_COMPANY_FAILURE'
+
+
+export  const GET_COMPANY_INFO = 'GET_COMPANY_INFO'
+export  const GET_ORG_USER_INFO = 'GET_ORG_USER_INFO'
+
+export  const GET_COMPANYUser_DETAIL = 'GET_COMPANYUser_DETAIL'
+
+
+export  const GET_SUBJECT_SUCCESS = 'GET_SUBJECT_SUCCESS'
+export  const GET_SUBJECT_FAILURE = 'GET_SUBJECT_FAILURE'

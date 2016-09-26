@@ -4,11 +4,12 @@
       <h3 class="login-title">Vue webpack</h3>
       <img id="profile-img"  class="profile-name-card" src="../assets/logo.png">
       <p id="profile-name" class="profile-name-card"></p>
-      <form class="form-signin">
+      <form class="form-signin" @submit="login()">
         <input class="form-control" placeholder="用户名">
         <input class="form-control" placeholder="密码">
-        <button class="btn btn-lg btn-primary btn-block btn-signin" @click="login()">登录</button>
+        <input class="form-control" type="submit">
       </form>
+      <button @click="login()">clik</button>
     </div>
   </div>
 </template>
@@ -19,14 +20,43 @@
     }
 </style>
 <script>
+  import { localLogin } from '../vuex/actions';
+  var $ = require('jquery');
+
   export default {
     data:{
 
     },
+    vuex: {
+      getters: {
+
+      },
+      actions: {
+        localLogin
+      }
+    },
     methods: {
       login(){
-//        this.$route.router.go('/main');
-        router.go('/main')
+        $.ajax({
+          type:'post',
+          url:'https://localhost/script/login.esp',
+          data:{account:'admin',password:'OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFi NDQ4YTkxOA==',domain:'local'},
+          dataType:'jsonp',
+          success:function (res) {
+            self.$route.router.go('/main');
+          },
+          error:function (res) {
+            console.log(res);
+          }
+        })
+
+
+
+//        this.localLogin();
+
+
+
+
       }
     }
   }
