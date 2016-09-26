@@ -7,7 +7,7 @@
       <form class="form-signin">
         <input class="form-control" placeholder="用户名">
         <input class="form-control" placeholder="密码">
-        <button class="btn btn-lg btn-primary btn-block btn-signin">登录</button>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" @click="login()">登录</button>
       </form>
     </div>
   </div>
@@ -24,7 +24,10 @@
 
     },
     methods: {
-
+      login(){
+//        this.$route.router.go('/main');
+        router.go('/main')
+      }
     }
   }
 </script>

@@ -4,7 +4,7 @@
 
 export function configRouter(router) {
   router.redirect({
-    '/': 'main'
+    '/': 'login'
   })
 
   // 路由
